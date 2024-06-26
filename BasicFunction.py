@@ -19,12 +19,15 @@ def add_book():
   
     # print message
   print("Book added to your collection.")
-
+  menu_input()
+  
 def view_library():
   df = pd.read_csv('myShelf.csv')
   print(df)
+  menu_input()
 
 def menu_input():
+  print("\033[1;35;40m Menu Options \033[0m")
   print("1. Add book")
   print("2. View library")
   while True:
